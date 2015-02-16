@@ -43,7 +43,7 @@ $CONDA_BIN/conda update --yes conda #&> /dev/null
 $CONDA_BIN/conda install --yes pip #&> /dev/null
 if [ -e "$ROOT/conda-requirements.txt" ]; then
     echo "-----> Installing conda packages from conda-requirements.txt..."
-	$CONDA_BIN/conda install --yes --file "$ROOT/conda-requirements.txt" #&> /dev/null
+	$CONDA_BIN/conda install --yes --file "$ROOT/conda-requirements.txt" | indent #&> /dev/null
 fi
 if [ -e "$ROOT/requirements.txt" ]; then
 	echo "-----> Installing pip packages from requirements.txt..."
